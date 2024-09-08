@@ -9,8 +9,10 @@ const Productos = () => {
   useEffect(() => {
     const fetchProductos = async () => {
       try {
-        const { data } = await axios.get("https://parcial.nucleoslabs.com.co/api/v1/productos/listar");
-        setProductos(data);  // obtenemos la data de productos
+        const { data } = await axios.get(
+          "https://parcial.nucleoslabs.com.co/api/v1/productos/listar"
+        );
+        setProductos(data);
       } catch (error) {
         console.error("Error al obtener productos", error);
       }
@@ -27,7 +29,11 @@ const Productos = () => {
           <div key={producto._id} className="producto-card">
             <Link to={`/productos/${producto._id}`}>
               <div className="image-wrapper">
-                <img src={producto.image} alt={producto.name} className="producto-image" />
+                <img
+                  src={producto.image}
+                  alt={producto.name}
+                  className="producto-image"
+                />
               </div>
               <h3>{producto.name}</h3>
               <p>${producto.price}</p>

@@ -1,4 +1,3 @@
-// src/components/ProductoCard.jsx
 import React from "react";
 
 const ProductoCard = ({ producto }) => {

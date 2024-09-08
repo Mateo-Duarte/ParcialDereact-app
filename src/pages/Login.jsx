@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";  
 import "../assets/styles.css";
 
 const Login = () => {
@@ -17,7 +17,6 @@ const Login = () => {
         email,
         password,
       });
-      
       Swal.fire({
         icon: "success",
         title: "Login exitoso",
@@ -27,8 +26,9 @@ const Login = () => {
     } catch (error) {
       let errorMessage = "Error al iniciar sesión";
 
-      if (error?.response?.data?.message) {
-        errorMessage = `Error al iniciar sesión: ${error.response.data.message}`;
+      if (error.response && error.response.data) {
+        const { message } = error.response.data;
+        errorMessage = `${errorMessage}: ${message}`;
       }
 
       Swal.fire({
@@ -64,6 +64,11 @@ const Login = () => {
           </label>
           <button type="submit">Iniciar Sesión</button>
         </form>
+
+        <p>
+          ¿No tienes una cuenta?{" "}
+          <Link to="/registro">Regístrate aquí</Link>
+        </p>
       </div>
     </div>
   );

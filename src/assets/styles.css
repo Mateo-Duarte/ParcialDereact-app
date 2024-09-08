@@ -1,6 +1,4 @@
-/* Estilos para las páginas de Registro y Login */
-/* Estilos para las páginas de Registro y Login */
-/* Estilos para las páginas de Registro y Login */
+
 .container-background {
   display: flex;
   justify-content: center;
@@ -15,30 +13,30 @@
 /* Fondo del formulario con una imagen */
 .register-container, .login-container {
   display: flex;
-  flex-direction: column; /* Mantiene los elementos en vertical */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
-  background-image: url('/src/assets/images.jpeg'); /* Ruta de la imagen de fondo */
-  background-size: cover; /* Hace que la imagen cubra todo el contenedor */
-  background-position: center; /* Centra la imagen en el contenedor */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-image: url('/src/assets/formu.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 400px; /* Ajusta el ancho del formulario */
+  width: 400px; 
 }
 
 /* Estilos de encabezado del formulario */
 .register-container h2, .login-container h2 {
   text-align: center;
   margin-bottom: 1.5rem;
-  width: 100%; /* Asegura que el título ocupe todo el ancho */
+  width: 100%; 
 }
 
 /* Estilos de los inputs */
 .register-container input, .login-container input {
   display: block;
-  width: 100%; /* Asegura que los inputs ocupen el ancho completo */
+  width: 100%; 
   margin-bottom: 1rem;
   padding: 0.75rem;
   border: 1px solid #ccc;
@@ -47,7 +45,7 @@
 
 /* Estilos del botón de registro/login */
 .register-container button, .login-container button {
-  width: 100%; /* Botón de ancho completo */
+  width: 100%; 
   padding: 0.75rem;
   background-color: #007bff;
   color: white;
@@ -61,7 +59,7 @@
 }
 
 
-/* Estilos para la galería de productos */
+
 /* Contenedor principal de productos */
 .productos-container {
   padding: 20px;
@@ -88,7 +86,7 @@
   transform: scale(1.05);
 }
 
-/* Envolvente de la imagen para asegurar que mantenga proporciones */
+/* Envolvente de la imagen  */
 .image-wrapper {
   width: 100%;
   height: 250px;
@@ -98,11 +96,11 @@
   align-items: center;
 }
 
-/* Estilo de las imágenes para asegurar igualdad de tamaño */
+/* Estilo de las imágenes */
 .producto-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Asegura que la imagen cubra el espacio sin perder proporciones */
+  object-fit: cover; 
 }
 
 h3 {

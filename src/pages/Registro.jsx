@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom"; 
 import "../assets/styles.css";
 
 const Registro = () => {
@@ -21,7 +21,6 @@ const Registro = () => {
         email,
         password,
       });
-      
       Swal.fire({
         icon: "success",
         title: "Registro exitoso",
@@ -31,8 +30,9 @@ const Registro = () => {
     } catch (error) {
       let errorMessage = "Error al registrar el usuario";
 
-      if (error?.response?.data?.message) {
-        errorMessage = `Error al registrar el usuario: ${error.response.data.message}`;
+      if (error.response && error.response.data) {
+        const { message } = error.response.data;
+        errorMessage = `${errorMessage}: ${message}`;
       }
 
       Swal.fire({
@@ -86,6 +86,12 @@ const Registro = () => {
           </label>
           <button type="submit">Registrar</button>
         </form>
+
+        
+        <p>
+          ¿Ya tienes una cuenta?{" "}
+          <Link to="/login">Inicia sesión aquí</Link>
+        </p>
       </div>
     </div>
   );
